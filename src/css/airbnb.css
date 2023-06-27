@@ -2,8 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
-  display: block;
+.airbnb-container {
   font-family: 'Poppins', sans-serif;
 }
 

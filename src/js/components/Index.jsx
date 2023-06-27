@@ -1,11 +1,11 @@
-import '/src/css/index/App.css'
-import Navbar from '/src/components/Navbar'
+import Navbar from './Navbar'
+import '/src/css/index.css' 
 
 const scpNumber = Math.floor(Math.random()*900000) + 10000;
-function App() {
 
+function Index() {
   return (
-    <>
+    <div className='index-container'>
       <Navbar />
       <div className='container'>
         <div className='col-1'>
@@ -97,8 +97,8 @@ function App() {
           </section>
         </div>
       </div>
-    </>
+    </div>
   )
 }
 
-export default App
+export default Index
