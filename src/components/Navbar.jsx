@@ -4,7 +4,7 @@ function Navbar() {
     <>
       <nav>
         <a href="/index.html">Dossier</a>
-        <a href="/src/pages/airbnb-clone.html">Air BNB Clone</a>
+        <a href="/airbnb-clone.html">Air BNB Clone</a>
       </nav>
     </>
   )
