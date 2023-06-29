@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import {createBrowserRouter, RouterProvider} from 'react-router-dom'
 import Index from './components/Index'
-import Airbnb from './components/Airbnb'
+import Training from './components/Training'
 
 const router = createBrowserRouter([
   {
@@ -10,8 +10,8 @@ const router = createBrowserRouter([
     element: <Index />
   },
   {
-    path: '/airbnb',
-    element: <Airbnb />
+    path: '/training',
+    element: <Training />
   },
 ])
 

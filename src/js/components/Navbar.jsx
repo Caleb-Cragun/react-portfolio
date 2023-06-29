@@ -3,8 +3,8 @@ function Navbar() {
   return (
     <>
       <nav>
-        <a href='/'>Dossier</a>
-        <a href='/airbnb'>AirBnB Clone</a>
+        <a href='/'>Classification Sheet</a>
+        <a href='/training'>Training</a>
       </nav>
     </>
   )

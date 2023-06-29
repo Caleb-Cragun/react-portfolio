@@ -1,7 +1,8 @@
 import Navbar from './Navbar'
 import '/src/css/index.css' 
 
-const scpNumber = Math.floor(Math.random()*900000) + 10000;
+const scpNumber = Math.floor(Math.random()*900000) + 10000
+const classification = Math.floor(Math.random()*100) == 99 ? 'Keter' : 'Euclid'
 
 function Index() {
   return (
@@ -25,8 +26,9 @@ function Index() {
         </div>
         <div className='col-2'>
           <section className='description-section'>
+            <img className="scp-image" src="/logos/scp.png" alt="foundation" />
             <h1><strong>Item #: </strong>SCP-{scpNumber} a.k.a. Caleb Cragun</h1>
-            <h3><strong>Object Class: </strong>{Math.floor(Math.random()*100) == 99 ? 'Keter' : 'Euclid'}</h3>
+            <h3><strong>Object Class: </strong>{classification}</h3>
             <hr/>
             <h3>Special Containment Procedures</h3>
             <p>
@@ -92,6 +94,19 @@ function Index() {
               while the containment procedures aim to ensure the security of sensitive information 
               and prevent potential breaches.
             </p>
+            {classification == 'Keter' && <>
+              <h3>Addendum 2</h3>
+              <p>
+                SCP-{scpNumber} has escaped containment. It is believed that SCP-{scpNumber} used its
+                anomalous programming abilities to breach security protocols and gain access to restricted
+                information. The current whereabouts of SCP-{scpNumber} are unknown, and it is considered
+                a high priority target for recontainment. SCP-{scpNumber} has been reclassified as Keter
+                after it was discovered that it had been using its abilities to create a one-time-use
+                piece of anomalous software allowing it to teleport to a random location within a 100-mile
+                radius. The Foundation is currently working to develop a countermeasure to prevent SCP-{scpNumber}
+                from using this type of software again.
+              </p>
+            </>}
             <br/>
             <p>**Generated with ChatGPT**</p>
           </section>
