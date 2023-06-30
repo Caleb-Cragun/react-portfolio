@@ -12,8 +12,8 @@ function Card(props) {
         <img className="card--image" src={`/images/${props.image}`} />
         <div className="card--stats">
           <img className='card--star' src="/images/star.png"/>
-          <span>{props.rating}</span>
-          <span className="gray">({props.reviewCount}) • {props.location}</span>
+          <span>{props.stats.rating}</span>
+          <span className="gray">({props.stats.reviewCount}) • {props.location}</span>
         </div>
         <p>{props.title}</p>
         <p><span className="bold">From ${props.cost}</span> / person</p>

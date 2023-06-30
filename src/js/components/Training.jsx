@@ -9,13 +9,7 @@ function Training() {
   const cardElements = cardData.map(card => {
     return <Card
       key={card.id}
-      image={card.image}
-      rating={card.stats.rating}
-      reviewCount={card.stats.reviewCount}
-      location={card.location}
-      title={card.title}
-      cost={card.cost}
-      openSpots={card.openSpots}
+      {...card}
     />
   })
   return (
