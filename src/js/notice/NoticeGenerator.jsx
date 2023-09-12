@@ -1,5 +1,4 @@
-import React, { useState } from "react"
-import noticeData from '../notice/noticeData'
+import React, { useEffect, useState } from "react"
 
 function NoticeGenerator() {
   const [notice, setNotice] = useState({
@@ -8,10 +7,17 @@ function NoticeGenerator() {
     randomImage: "http://i.imgflip.com/1bij.jpg"
   })
 
+  const [allNotices, setAllNotices] = useState([])
+
+  useEffect(() => {
+    fetch("https://api.imgflip.com/get_memes")
+    .then( res => res.json())
+    .then(data => setAllNotices(data.data.memes))
+  }, [])
+
   function getNoticeImage() {
-    const noticeArray = noticeData.data.notices;
-    const randomNumber = Math.floor(Math.random() * noticeArray.length)
-    const url = noticeArray[randomNumber].url;
+    const randomNumber = Math.floor(Math.random() * allNotices.length)
+    const url = allNotices[randomNumber].url
     setNotice(prevNotice => ({
         ...prevNotice,
         randomImage: url
